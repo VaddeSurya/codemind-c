@@ -1,19 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int i,j,n;
-    scanf("%d",&n);
-    for(i=n; i>=1; i--)
-    {
-        for(j=1;j<=i;j++)
-    {
-        printf("%d",j);
+    int a,i;
+    scanf("%d",&a);
+    int t=a;
+    for(i=1; i<=a; i++){
         
-    }
-    printf("
-");
-    }
-    {
-   
+while(a!=0){
+
+    printf("%d ",a);
+    a--;
+    
 }
+printf("
+");
+a=t;
+
+}
+    
 }
