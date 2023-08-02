@@ -26,5 +26,6 @@ int main() {
     } else {
         printf("Not Ugly Number");
     }
+
     return 0;
 }
