@@ -1,22 +1,22 @@
-#include<stdio.h>
-int main()
-{
-    int n,i,rem,rev=0,temp;
-    scanf("%d",&n);
-    temp=n;
-    while(n)
-    {
-        rem=n%10;
-        rev=rev*10+rem;
-        n=n/10;
+#include <stdio.h>
+
+int isPalindrome(int num) {
+    int reversed = 0, original = num;
+
+    while (num > 0) {
+        int digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num /= 10;
     }
-    if(rev==temp)
-    {
+    return original == reversed;
+}
+int main() {
+    int num;
+    scanf("%d", &num);
+    if (isPalindrome(num)) {
         printf("True");
-        
-    }
-    else
-    {
+    } else {
         printf("False");
     }
+    return 0;
 }
