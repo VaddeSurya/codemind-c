@@ -1,25 +1,25 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,r,s=0;
+    int n,dig,sum=0;
     scanf("%d",&n);
-    while(n>0)
+    while(sum!=1 && sum!=4)
     {
-        r=n%10;
-        s=s+r*r;
-        n=n/10;
-        if(n==0 && s>=10)
+        sum=0;
+        while(n!=0)
         {
-            n=s;
-            s=0;
+            dig=n%10;
+            sum+=dig*dig;
+            n/=10;
         }
+        n=sum;
     }
-    if(s==1)
+    if(sum==1)
     {
         printf("True");
     }
     else
-{
-    printf("False");
-}
+    {
+        printf("False");
+    }
 }
