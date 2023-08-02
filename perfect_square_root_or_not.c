@@ -1,19 +1,26 @@
-#include<stdio.h>
-int main()
-{
-    int i,n,c=0;
-    scanf("%d",&n);
-    for(i=1;i<=n/2;i++)
-    {
-        if(n==i*i)
-        {
-            printf("True");
-            c=1;
-            break;
-        }
+#include <stdio.h>
+#include <math.h>
+
+int isPerfectSquare(int num) {
+    if (num <= 0) {
+        return 0;
     }
-    if(c==0)
-    {
+
+    int root = (int)sqrt(num);
+    int ans = root * root;
+
+    return ans == num;
+}
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    if (isPerfectSquare(num)) {
+        printf("True");
+    } else {
         printf("False");
     }
+
+    return 0;
 }
