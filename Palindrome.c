@@ -1,22 +1,21 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int isPalindrome(int num) {
-    int reversed = 0, original = num;
+int main()
+{
+     int n, num, digit, rev = 0;
+     cin >> num;
+     n = num;
+     while(num>0)
+     {
+         digit = num % 10;
+         rev = (rev * 10) + digit;
+         num = num / 10;
+     }
+     if (n == rev)
+         cout << "True";
+     else
+         cout << "False";
 
-    while (num > 0) {
-        int digit = num % 10;
-        reversed = reversed * 10 + digit;
-        num /= 10;
-    }
-    return original == reversed;
-}
-int main() {
-    int num;
-    scanf("%d", &num);
-    if (isPalindrome(num)) {
-        printf("True");
-    } else {
-        printf("False");
-    }
     return 0;
 }
