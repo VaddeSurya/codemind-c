@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int sum=0,dig,n,count=0,org;
+    scanf("%d",&n);
+    org=n;
+    while(n!=0)
+    {
+        count++;
+        n/=10;
+    }
+    n=org;
+    while(n!=0)
+    {
+        dig=n%10;
+        sum+=pow(dig,count);
+        count--;
+        n/=10;
+    }
+    if(sum==org)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
