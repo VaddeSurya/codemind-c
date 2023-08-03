@@ -1,10 +1,8 @@
-#include <iostream>
-using namespace std;
-
+#include <stdio.h>
 int main()
 {
      int n, num, digit, rev = 0;
-     cin >> num;
+     scanf("%d",&num);
      n = num;
      while(num>0)
      {
@@ -13,9 +11,8 @@ int main()
          num = num / 10;
      }
      if (n == rev)
-         cout << "True";
+         printf("True");
      else
-         cout << "False";
-
+         printf("False");
     return 0;
 }
