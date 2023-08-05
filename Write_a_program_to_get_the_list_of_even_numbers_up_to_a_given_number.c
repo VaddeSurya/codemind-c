@@ -1,11 +1,14 @@
-#include<stdio.h>
+#include<iostream>
+using namespace std;
 int main()
 {
-    int i,n,j,k;
-    scanf("%d%d",&n,&k);
-    for(i=n; i<=k; i++)
-    if(i%2==0)
+    int i,n,m;
+    cin>>n>>m;
+    for(i=n;i<=m;i++)
     {
-    printf("%d ", i);
-}
+        if(i%2==0)
+        {
+            cout<<i<<" ";
+        }
+    }
 }
