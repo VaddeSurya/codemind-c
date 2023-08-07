@@ -1,16 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,digit,large=0;
+    int n,dig,lag=0;
     scanf("%d",&n);
     while(n>0)
     {
-        digit=n%10;
-        if(digit>large)
+        dig=n%10;
+        if(dig>lag)
         {
-            large=digit;
+            lag=dig;
         }
-        n=n/10;
+        n/=10;
     }
-    printf("%d",large);
+    printf("%d",lag);
+    
 }
