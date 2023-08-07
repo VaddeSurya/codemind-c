@@ -1,25 +1,28 @@
-#include<stdio.h>
+#include<iostream>
+using namespace std;
 int main()
 {
-    int n,dig,sum=0;
-    scanf("%d",&n);
-    while(sum!=1 && sum!=4)
+    int n,sum1=0,dig;
+    cin>>n;
     {
-        sum=0;
-        while(n!=0)
+        while (n!=1 && n!=4)
         {
-            dig=n%10;
-            sum+=dig*dig;
-            n/=10;
+            sum1=0;
+            while(n!=0)
+            {
+                dig=n%10;
+                sum1+=dig*dig;
+                n/=10;
+            }
+            n=sum1;
         }
-        n=sum;
-    }
-    if(sum==1)
-    {
-        printf("True");
-    }
-    else
-    {
-        printf("False");
+        if(n==1)
+        {
+            cout<<"True";
+        }
+        else
+        {
+            cout<<"False";
+        }
     }
 }
