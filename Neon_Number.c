@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     int n,sum1=0,dig;
-    cin>>n;
+    scanf("%d",&n);
     int sq=n*n;
     while(sq>0)
     {
@@ -13,10 +13,10 @@ int main()
     }
     if(n==sum1)
     {
-        cout<<"Neon Number";
+        printf("Neon Number");
     }
     else
     {
-        cout<<"Not Neon Number";
+        printf("Not Neon Number");
     }
 }
