@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     int n,sum1=0,dig;
-    cin>>n;
+    scanf("%d",&n);
     {
         while (n!=1 && n!=4)
         {
@@ -18,11 +18,11 @@ int main()
         }
         if(n==1)
         {
-            cout<<"True";
+            printf("True");
         }
         else
         {
-            cout<<"False";
+            printf("False");
         }
     }
 }
