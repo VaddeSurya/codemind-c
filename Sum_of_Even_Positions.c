@@ -1,21 +1,15 @@
-#include <stdio.h>
-
-int main() {
-    int n;
-    scanf("%d", &n);
-    int arr[n];
-    for (int i = 0; i < n; ++i) {
-        scanf("%d", &arr[i]);
+#include<stdio.h>
+int main()
+{
+    int n,arr[100],i,sum=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+        if(i%2==0)
+        {
+            sum+=arr[i];
+        }
     }
-
-    int even = 0;
-
-    for (int i = 0; i < n; i += 2) {
-        even += arr[i];
-    }
-
-    printf("%d
-", even);
-
-    return 0;
+    printf("%d",sum);
 }
