@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,dig,sum=0,pro=1,res;
+    int n,i,sum=0,pro=1,dig;
     scanf("%d",&n);
     while(n>0)
     {
@@ -14,8 +14,7 @@ int main()
     {
         printf("Spy Number");
     }
-    else
-    {
+    else{
         printf("Not Spy Number");
     }
 }
