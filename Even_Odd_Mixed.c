@@ -1,32 +1,32 @@
-#include<stdio.h>
-int main()
-{
-    int n;
-    scanf("%d",&n) ;
-    bool alleven=true;
-    bool allodd=true;
-    while(n!=0)
-    {
-        int dig=n%10;
-        if(dig%2==0){
-            allodd=false;
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    
+    int allEven = 1;
+    int allOdd = 1;
+    int originalNum = num;
+    
+    while (num != 0) {
+        int digit = num % 10;
+        
+        if (digit % 2 == 0) {
+            allOdd = 0; 
+        } else {
+            allEven = 0; 
         }
-        else
-        {
-            alleven=false;
-        }
-        n/=10;
+        
+        num /= 10;
     }
-    if(alleven)
-    {
+    
+    if (allEven) {
         printf("Even");
-    }
-    else if(allodd)
-    {
+    } else if (allOdd) {
         printf("Odd");
-    }
-    else
-    {
+    } else {
         printf("Mixed");
     }
+    
+    return 0;
 }
