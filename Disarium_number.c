@@ -2,23 +2,23 @@
 #include<math.h>
 int main()
 {
-    int sum=0,dig,n,count=0,org;
+    int n,orgnum,count=0,dig,sum=0;
     scanf("%d",&n);
-    org=n;
+    orgnum=n;
     while(n!=0)
     {
         count++;
         n/=10;
     }
-    n=org;
+    n=orgnum;
     while(n!=0)
     {
         dig=n%10;
-        sum+=pow(dig,count);
+        sum=pow(dig,count)+sum;
         count--;
         n/=10;
     }
-    if(sum==org)
+    if(sum==orgnum)
     {
         printf("True");
     }
