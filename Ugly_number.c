@@ -1,31 +1,26 @@
 #include <stdio.h>
-
-int isUgly(int num) {
-    if (num <= 0) {
+ int isUgly(int n)
+{
+    if (n == 1)
+        return 1;
+    if (n <= 0)
         return 0;
-    }
-
-    while (num % 2 == 0) {
-        num /= 2;
-    }
-    while (num % 3 == 0) {
-        num /= 3;
-    }
-    while (num % 5 == 0) {
-        num /= 5;
-    }
-
-    return num == 1;
+    if (n % 2 == 0)
+        return isUgly(n / 2);
+    if (n % 3 == 0)
+        return isUgly(n / 3);
+    if (n % 5 == 0)
+        return isUgly(n / 5);
+     return 0;
 }
-int main() {
-    int num;
-    scanf("%d", &num);
-
-    if (isUgly(num)) {
+int main()
+{
+    int m;
+    scanf("%d",&m);
+    int no = isUgly(m);
+    if (no == 1)
         printf("Ugly Number");
-    } else {
+    else
         printf("Not Ugly Number");
-    }
-
     return 0;
 }
